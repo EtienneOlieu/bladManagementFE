@@ -24,3 +24,8 @@
 body{
     position: relative;
 }
+
+.anchorSection{
+    margin-top: -6%;
+    padding-top: 6%;
+}
