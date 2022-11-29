@@ -2,7 +2,25 @@
 .nav-padding{
     padding-right: 100px;
 }
-.frontPageSection{
-    
 
+.red .active a,
+.red .active a:hover{
+    background-color: red;
+}
+
+#nav1
+{
+    background-color: aqua;
+    opacity: 1.5;
+    filter: (opacity=50);
+}
+
+#navBillede
+{
+    opacity: 100;
+    filter: (opacity=100);
+}
+
+body{
+    position: relative;
 }
