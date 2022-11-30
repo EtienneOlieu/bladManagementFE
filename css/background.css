@@ -29,3 +29,11 @@ body{
     margin-top: -6%;
     padding-top: 6%;
 }
+
+.carousel {
+      margin: auto;
+      width: 50%;
+      border: 3px solid green;
+      padding: 0px;
+      height: auto;
+    }

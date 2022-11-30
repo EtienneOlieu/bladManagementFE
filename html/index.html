@@ -12,7 +12,7 @@
     
     <div id="bm_navbar_id">
     <nav id="bm_navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark px-4">
-        <a class="navbar-brand" href="#scrollSpyHeading1">
+        <a class="navbar-brand" href="#homeHeading">
             <img src="https://drive.google.com/uc?export=view&id=1s5mPyFmxfKNGDl48i28y9lSv-vSPm74Q" width="60" height="60" class="img-thumbnail">
           </a> 
           <ul class="nav">
@@ -21,20 +21,24 @@
           <ul class="navbar-nav mr-auto">
           
             <li class="nav-item">
-                <a class="nav-link" href="#scrollSpyHeading2">Artists</a>
+                <a class="nav-link" href="#artistHeading">Artists</a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="#scrollSpyHeading3">Gallery</a>
+              <a class="nav-link" href="#galleryHeading">Gallery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#scrollSpyHeading4">Events</a>
+                <a class="nav-link" href="#eventsHeading">Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#scrollSpyHeading5">About</a>
+                <a class="nav-link" href="#aboutHeading">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Shop</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contactHeading">Contact</a>
+              </li>
+              
           </ul>
         </li>
         </ul>
@@ -44,101 +48,71 @@
       <div data-bs-spy="scroll" data-bs-target="#bm_navbar" class="scrollspy-example" tabindex="0">
 
 
-      <section id="scrollSpyHeading1" class="frontPageSection">
-        <div class="has-bg-img" id="bgImage">
+        <section id="homeHeading" class="frontPageSection">
+          <div class="has-bg-img" id="bgImage">
             <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=1C6MCGDqf_xMHc8oPTFBMGrDykxCdsDDU"
             height="auto">
-        </div>
-      </section>
+          </div>
+        </section>
        
-      
-      <section id="scrollSpyHeading2" class="anchorSection">
+        <section id="artistHeading" class="anchorSection" >
         Artists
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>her</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-      </section>
+        <div id="carouselForBands" class="carousel slide" data-bs-ride="carousel" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>Fraads</h2>
+              </div> 
+            </div>
+            <div class="carousel-item">
+              <img src="https://wallpapercave.com/wp/wp2651397.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <button type="button">Blikfang</button>
+              </div> 
+            </div>
+            <div class="carousel-item">
+              <img src="https://free4kwallpapers.com/uploads/originals/2015/07/26/nice-place-hd-wallpaper.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h2>bbyBino</h2>
+              </div>   
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselForBands" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselForBands" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        
+        </div>
+     
 
-      <section id="scrollSpyHeading3"class="anchorSection">
+
+
+
+
+
+        </section>
+
+        <section id="galleryHeading"class="anchorSection">
         Gallery
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>her</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-      </section>
+        </section>
 
-      <section id="scrollSpyHeading4"class="anchorSection">
+        <section id="eventsHeading"class="anchorSection">
         Events
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>her</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-      </section>
+        </section>
 
-      <section id="scrollSpyHeading5"class="anchorSection">
+          <section id="aboutHeading"class="anchorSection">
         About
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>her</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-        <p>asdgælknasfgdælknasdækhasdfgøhkpaskpøhasgøhpkasdøhkasdgøjasdgøkasdg</p>
-      </section>
-    </div>
-      </div>
+          </section>
+
+          <section id="contactHeading"class="anchorSection">
+            Contact Information
+          </section>
+        </div>
       <script src="../bladManagementFE/js/navbarOffset.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
