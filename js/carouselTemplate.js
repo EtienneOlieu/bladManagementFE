@@ -20,14 +20,18 @@ class TemplateHandler {
             let clone = template.content.cloneNode(true)
             let itemRoot = clone.querySelector('#isItemActive')
             let imageRoot = clone.querySelector("img")
+            let artistNameRoot = clone.querySelector('#thisArtistName')
            
             if(counter==1){
                 itemRoot.setAttribute("class", "carousel-item active")
             }
 
-            let artistNameRoot = clone.querySelector('#thisArtistName')
             imageRoot.setAttribute("src", data[artistIndex].imageLink)
-            imageRoot.setAttribute("class", "d-block w-100 collapsible thisImage")
+            imageRoot.setAttribute("class", "d-block w-100 thisImage ")
+            imageRoot.setAttribute("data-bs-toggle", "collapse")
+            imageRoot.setAttribute("href", "#collapseArtist")
+            imageRoot.setAttribute("role", "button")
+            
             artistNameRoot.textContent = data[artistIndex].name
             let target = document.querySelector('#targetId')
             target.appendChild(clone)
