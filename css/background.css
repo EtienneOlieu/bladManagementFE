@@ -1,0 +1,64 @@
+
+
+
+.nav-padding{
+    padding-right: 100px;
+}
+
+.red .active a,
+.red .active a:hover{
+    background-color: red;
+}
+
+#nav1
+{
+    background-color: aqua;
+    opacity: 1.5;
+    filter: (opacity=50);
+}
+
+#navBillede
+{
+    opacity: 100;
+    filter: (opacity=100);
+}
+
+body{
+    position: relative;
+}
+
+.anchorSection{
+    margin-top: -5.5%;
+    padding-top: 5.5%;
+    min-height: 110vh;
+}
+
+.carousel {
+      margin: auto;
+      width: 50%;
+      border: 3px solid green;
+      padding: 0px;
+      height: auto;  
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+.thisImage{
+    object-fit: contain;
+    width: 50%;
+    height: auto;
+}
+#artistHeading{
+    background-color: rgb(201, 3, 3);
+}
+#galleryHeading{
+    background-color: rgb(175, 0, 0);
+}
+#eventsHeading{
+    background-color: rgb(150, 4, 4);
+}
+#aboutHeading{
+    background-color: rgb(100, 1, 1);
+}
+#contactHeading{
+    background-color: rgb(50, 0, 0);
+}

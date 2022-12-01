@@ -32,3 +32,10 @@
     display: flex;
     justify-content: center;
 }
+
+.visible {
+    display: block;
+}
+.hidden {
+    display: none;
+}
