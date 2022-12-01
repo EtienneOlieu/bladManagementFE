@@ -1,0 +1,34 @@
+.visitCardImage {
+    float: left;
+}
+
+.visitCardFoto {
+    height: 200px;
+    width: 200px;
+    border-radius: 25px;
+}
+
+.visitCard {
+    display: flex;
+    flex-direction: row;    
+    color: black;
+    background-color: whitesmoke;
+    height: 200px;    
+    border-radius: 25px;
+}
+
+.visitCardData {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    background-color: whitesmoke;
+}
+
+.visitCards {
+    padding: 20px;
+}
+
+.visitCardCenter {
+    display: flex;
+    justify-content: center;
+}

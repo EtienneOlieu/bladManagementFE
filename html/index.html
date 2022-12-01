@@ -1,1 +1,58 @@
-//test
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="../css/aboutBM.css" rel="stylesheet">
+
+    <!--Local scripts-->
+
+    <script src="../js/aboutBM.js" async defer></script>
+</head>
+
+<body onload="aboutClass.updatePage()">
+
+    <div class="row text-white bg-secondary visitCards">
+        <div class="col-7 ">
+            <div>
+                <h2>Blad Management</h2>
+                <p>We are.....</p>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <div id="visitCards">
+                <template id="visitCardTemplate">
+                    <div class="row ">
+                        <div class="col-5">
+                            <img>
+                            <!--we need to update the src-->
+                        </div>
+                        <div class="col-7">
+                            <div class="row" id="visitCardInfo">
+                                fullName is firstName and lastName
+                            </div>
+                            <div class="row" id="visitCardEmail">
+                                converted string
+                            </div>
+                        </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
