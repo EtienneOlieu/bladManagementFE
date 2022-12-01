@@ -26,8 +26,8 @@ body{
 }
 
 .anchorSection{
-    margin-top: -5.5%;
-    padding-top: 5.5%;
+    margin-top: -11vh;
+    padding-top: 11vh;
     min-height: 110vh;
 }
 
@@ -59,4 +59,12 @@ body{
 }
 #contactHeading{
     background-color: rgb(50, 0, 0);
+}
+
+.collapsible{
+    cursor: pointer;
+}
+.content{
+    display: none;
+    overflow: hidden;
 }
