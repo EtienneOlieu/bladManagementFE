@@ -10,8 +10,8 @@ $(document).ready(function () {
 function switchPage(id) {
     let active = localStorage.getItem("currentPage"); // retrieve current page
     if (active !== id) { // No action if requested id is active
-        $(active).hide(function () { // hide current table
-            $(id).show(function () { // show requested table
+        $(active).hide(10, function () { // hide current table
+            $(id).show(10, function () { // show requested table
                 localStorage.setItem("currentPage", id); // make requested Page active
             });
         });

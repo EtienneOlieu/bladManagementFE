@@ -39,3 +39,15 @@
 .hidden {
     display: none;
 }
+
+.grid {
+    cursor: pointer;
+}
+
+.grid:hover {
+    opacity: 50%;
+}
+
+.galleryPopup {
+    width: 50%;
+}
