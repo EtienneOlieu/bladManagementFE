@@ -6,14 +6,7 @@ class findArtistByName{
     }
 
     
-
-
-     getArtistName(activeElement){
-        let artistName = activeElement.split('\n')[0]
-
-        
-    }
-
+    /* måske redundant */
     async getArtistByName(name) {
         let response = await fetch(this.endpointUrl + "?artistName=" + name);
         const data = await response.json();

@@ -77,7 +77,7 @@
         </div>
 
         <div class="collapse" id="collapseArtist">
-          <div class="card card-body">  
+          <div class="card card-body carousel" id="divToBeClearedAndAppended">  
             TEKST HER
             <div id="expandedArtistTarget" class="content"></div>
           </div>
@@ -106,7 +106,7 @@
         </div>
 
         <template id="carouselContent">
-          <div id="isItemActive" class="carousel-item" href="javascript:;" onclick="GetAndFindArtist.getArtistName(window.document.activeElement.innerText)">
+          <div id="isItemActive" class="carousel-item" href="javascript:;" onclick="carouselClass.getArtistName(window.document.activeElement.innerText)">
             <img src="..." class="..." alt="...">
             <div class="carousel-caption d-none d-md-block">
               <div id="thisArtistName">
@@ -117,25 +117,26 @@
 
         <template id="artistExpanded">
           <div id="artistName"></div>
-          <div class="artistImage" src="..." class="..." alt="..."></div>
+          <img class="artistImage"  class="..." >
           <div id="description"></div>
           <div id="agentInfo"></div>
           <div id="youtubePlayer">
-            <iframe width="420" height="315" src="..."></iframe>
+            <iframe width="50%" height="auto" src="..."></iframe>
           </div>
-         
+         <div class="container">
           <div class="row">
-            <div class="column">
+            <div class="col-sm">
               <a id="facebookLink" href="..." class="fa fa-facebook"></a>
             </div>
         
-            <div class="column">
+            <div class="col-sm">
               <a id="instagramLink"  href="..." class="fa fa-instagram"></a>
             </div>
         
-            <div class="column">
+            <div class="col-sm">
               <a id="spotifyLink" href="..." class="fa fa-spotify"></a>
             </div>
+          </div>
         </div>
       
         </template>
