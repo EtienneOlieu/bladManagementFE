@@ -15,7 +15,7 @@ class findArtistByName{
     }
 
     async getArtistByName(name) {
-        let response = await fetch(this.endpointUrl);
+        let response = await fetch(this.endpointUrl + "?artistName=" + name);
         const data = await response.json();
         
 
