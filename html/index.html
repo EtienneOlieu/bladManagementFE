@@ -77,7 +77,7 @@
         </div>
 
         <div class="collapse" id="collapseArtist">
-          <div class="card card-body carousel" id="divToBeClearedAndAppended">  
+          <div class="card card-body expandedContent" id="divToBeClearedAndAppended">  
             TEKST HER
             <div id="expandedArtistTarget" class="content"></div>
           </div>
@@ -116,15 +116,18 @@
         </template>
 
         <template id="artistExpanded">
-          <div id="artistName"></div>
-          <img class="artistImage"  class="..." >
-          <div id="description"></div>
-          <div id="agentInfo"></div>
-          <div id="youtubePlayer">
-            <iframe width="50%" height="auto" src="..."></iframe>
-          </div>
-         <div class="container">
-          <div class="row">
+          <div class="d-flex">
+
+        <div class="container justify-content-center">
+          <div id="artistName" class="row justify-content-center"></div>
+
+          <div id="description" class="row align-self-center"></div>
+
+            <iframe class="row justify-content-center" width="560" height="315" src="..."></iframe>
+          
+            <div id="agentInfo" class="row justify-content-center"></div>
+          
+          <div class="container row justify-content-evenly">
             <div class="col-sm">
               <a id="facebookLink" href="..." class="fa fa-facebook"></a>
             </div>
@@ -138,6 +141,7 @@
             </div>
           </div>
         </div>
+      </div>
       
         </template>
 
