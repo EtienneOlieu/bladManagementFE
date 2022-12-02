@@ -6,7 +6,6 @@ class TemplateHandler {
 
     }
 
-
     async loadFromDocument() {
         
         let response = await fetch(this.endpointURL);
