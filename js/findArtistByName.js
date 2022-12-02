@@ -5,25 +5,25 @@ class findArtistByName{
 
     }
 
-     getArtistByName(activeElement){
-        console.log(activeElement.split('\n')[0])
+    
 
 
+     getArtistName(activeElement){
+        let artistName = activeElement.split('\n')[0]
 
+        
+    }
 
-
-        let activeCarousel = document.getElementsByClassName("active")[0];
-        console.log(activeCarousel);
-        let testDiv = document.getElementsByClassName("carousel-caption")[0];
-        console.log(testDiv);
-        let testname = testDiv.textContent
-        console.log(testname);
-
-
-
+    async getArtistByName(name) {
+        let response = await fetch(this.endpointUrl);
+        const data = await response.json();
+        
 
     }
 
+    
+
 }
 
-var test = new findArtistByName();
+
+var GetAndFindArtist = new findArtistByName();
