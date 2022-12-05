@@ -36,6 +36,7 @@ body{
       padding: 0px;
       height: auto;  
       overflow: hidden;
+      aspect-ratio: 16/9;
     }
 .expandedContent{
     margin: auto;
