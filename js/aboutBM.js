@@ -54,3 +54,15 @@ class About {
 
 }
 let aboutClass = new About();
+=======
+class About{
+
+constructor(){
+
+}
+
+
+
+}
+
+var aboutClass = new About();
