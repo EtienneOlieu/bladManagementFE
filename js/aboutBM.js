@@ -36,7 +36,7 @@ class About {
             let image = clone.querySelector('img')
             image.className = 'visitCardFoto'
             image.setAttribute("src", `${this.employees[index].imgURL}`)
-            
+
 
             let fullName = clone.querySelector('#visitCardInfo')
             fullName.className = 'visitCardData'

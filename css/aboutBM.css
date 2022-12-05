@@ -10,10 +10,10 @@
 
 .visitCard {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     color: black;
     background-color: whitesmoke;
-    height: 200px;    
+    height: 200px;
     border-radius: 25px;
 }
 
@@ -36,6 +36,7 @@
 .visible {
     display: block;
 }
+
 .hidden {
     display: none;
 }
@@ -49,5 +50,17 @@
 }
 
 .galleryPopup {
-    width: 50%;
+    width: 100%
+}
+
+.modal-dialog {
+    max-width: 90%;
+}
+
+.modal-body {
+    display: flex;
+}
+
+.modal-body img {
+    object-fit: contain;
 }

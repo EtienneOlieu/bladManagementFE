@@ -4,7 +4,7 @@ class TemplateHandler {
     
     endpointURL = "http://localhost:8080/get/artistList";
 
-    constructor(){
+    constructor() {
 
     }
     getArtistName(activeElement){
@@ -51,14 +51,15 @@ class TemplateHandler {
 
 
     async loadFromDocument() {
-        
+
         let response = await fetch(this.endpointURL);
 
         data = await response.json();
         let counter = 0;
         for (const artistIndex in data) {
             counter += 1;
-            
+
+
             let template = document.querySelector('#carouselContent')
             let clone = template.content.cloneNode(true)
             let itemRoot = clone.querySelector('#isItemActive')
@@ -78,8 +79,8 @@ class TemplateHandler {
             artistNameRoot.textContent = data[artistIndex].name
             let target = document.querySelector('#targetId')
             target.appendChild(clone)
-            }
         }
     }
+}
 
-    var carouselClass = new TemplateHandler()
+var carouselClass = new TemplateHandler()
