@@ -8,7 +8,8 @@ class TemplateHandler {
 
     }
     getArtistName(activeElement){
-        let artistName = activeElement.split('\n')[0]
+        console.log(activeElement)
+        let artistName = activeElement.split('\n')[6]
         /* 
         Skal kaldes hver gang der trykkes på et billede
         Clear innerHTML i den div som kunstneren skal appendes til
@@ -21,7 +22,6 @@ class TemplateHandler {
                 if(data[artistIndex].name == artistName)
                 realArtist = data[artistIndex];
             }
-
 
             const container = document.getElementById('divToBeClearedAndAppended');
             container.replaceChildren();

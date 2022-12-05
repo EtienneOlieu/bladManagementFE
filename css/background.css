@@ -35,7 +35,6 @@ body{
       width: 65%;
       padding: 0px;
       height: auto;  
-      aspect-ratio: 16/9;
       overflow: hidden;
     }
 .expandedContent{
@@ -63,10 +62,12 @@ body{
 }
 #contactHeading{
     background-color: rgb(50, 0, 0);
+}
 
 .collapsible{
     cursor: pointer;
 }
+
 .content{
     display: none;
     overflow: hidden;
