@@ -49,5 +49,14 @@
 }
 
 .galleryPopup {
-    width: 50%;
+    width: 100%;
+}
+.modal-dialog {
+    max-width: 80%;
+}
+.modal-body {
+    display: flex;
+}
+.modal-body img {
+    object-fit: contain;
 }

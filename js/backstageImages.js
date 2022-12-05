@@ -26,8 +26,7 @@ class Backstage{
     }
 
     showImage(url) {
-        alert("here");
-        let popup = document.getElementById('galleryPopup');
+        let popup = document.getElementById('modalBody');
         popup.innerHTML = `<br><br><br><br></br><img class="galleryPopup" src="${url}" alt="oops">`;
     }
 
