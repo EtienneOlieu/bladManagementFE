@@ -15,10 +15,12 @@
   <link rel="stylesheet" type="text/css" href="../css/background.css">
   <link href="../css/aboutBM.css" rel="stylesheet">
   <link href="../css/footer.css" rel="stylesheet">
+  <link href="../css/artistSlideStyling.css" rel="stylesheet">
   <script src="../js/expandable.js"></script>
   <script src="../js/navbarOffset.js"></script>
 
   <script src="../js/aboutBM.js" type="text/javascript"></script>
+  <script src="../js/artistSlides.js" type="text/javascript"></script>
   <script src="../js/carouselTemplate.js" type="text/javascript"></script>
   <script src="../js/backstageImages.js" type="text/javascript"></script>
 
@@ -77,28 +79,20 @@
     </section>
 
     <section id="artistHeading" class="anchorSection">
+      <!--Container til artists slideshow-->
+      <div class="container">
+        
+        <!--Target for image templates-->
+        
 
-      <div id="carouselForBands" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div id="targetId"> </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselForBands" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselForBands" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <div class="collapse" id="collapseArtist">
-        <div class="card card-body expandedContent" id="divToBeClearedAndAppended">
-          TEKST HER
-          <div id="expandedArtistTarget" class="content"></div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <div class="row"> 
+          <!--Target for thumbnail templates-->
         </div>
       </div>
-      <div id="expandedArtistTarget" class="content"></div>
 
     </section>
 
@@ -290,6 +284,23 @@
         </div>
       </div>
     </template>
+
+    <template id="artistSlideshow">
+      <div class="artistSlides">
+        <div class="numbertext"> current slide/total slides </div>
+          <div class="divWithImage" style="background-image:url()">  </div>
+      </div>
+    </template>
+
+    <template id="artistSlideThumbnail">
+      
+        <div class="column">
+          <img class="demo cursor" src="..." style="width: 100%" onclick="">
+          <!--onclick = currentSlide(slideNumber)-->
+        </div>
+      
+    </template>
+
 
   <template id="artistExpanded">
     <div class="d-flex">
