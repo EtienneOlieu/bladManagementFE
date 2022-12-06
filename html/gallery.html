@@ -32,7 +32,7 @@
                         <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href='javascript:;' onclick="switchPage('#homePage');">Home</a>
+                                    <a class="nav-link" href="index.html">Home</a>
                                 </li>
                             </ul>
                         </div>
@@ -47,20 +47,17 @@
 
             </div>
 
-            <div class="modal bg-dark bg-opacity-75 fade" id="popupImage" tabindex="-1" role="dialog">
+            <div class="modal bg-dark bg-opacity-75 hide" id="popupImage" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
+                            <button class="btn btn-dark" onclick="decrementCount()">previous</button>
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close"><span>Close</span></button>
+                            <button class="btn btn-dark" onclick="incrementCount()">next</button>
                         </div>
-                        <div class="modal-body" id="modalBody">
-                            
+                        <div class="modal-body" id="modalBody">                            
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-dark" onclick="decrementCount()"><</button>
-                            <button class="btn btn-dark" onclick="incrementCount()">></button>
                         </div>
                     </div>
                 </div>
