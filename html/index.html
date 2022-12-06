@@ -47,8 +47,7 @@
                   <a class="nav-link" href="#artistHeading">Artists</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href='javascript:;'
-                    onclick="switchPage('#galleryPage'); backstage.getAllImages();">Gallery</a>
+                  <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#eventsHeading">Events</a>
@@ -234,50 +233,7 @@
 
     </section>
   </div>
-
-
-  <div id="galleryPage" class="hidden" data-bs-toggle="modal" data-bs-target="#popupImage">
-    <div id="bm_navbar_id">
-      <nav id="bm_navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark px-4">
-        <a class="navbar-brand" href="#homeHeading">
-          <img src="https://drive.google.com/uc?export=view&id=1s5mPyFmxfKNGDl48i28y9lSv-vSPm74Q" width="60" height="60"
-            class="img-thumbnail">
-        </a>
-        <ul class="nav">
-          <li class="nav-item">
-            <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href='javascript:;' onclick="switchPage('#homePage');">Home</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
  
-    <h3 style="color: black">This is the gallery</h3>
-    <!--Upload backtage photos dynamically-->
-    <div class="row" id="backstageGrid">
-      images here
-    </div>
-
-    <div class="modal bg-dark bg-opacity-75 fade" id="popupImage" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body" id="modalBody"></div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-
 <!-- TEMPLATES FROM HERE: -->
    <template id="carouselContent">
       <div id="isItemActive" class="carousel-item" href="javascript:;"

@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+
+.nav-padding{
+    padding-right: 100px;
+}
+
+.red .active a,
+.red .active a:hover{
+    background-color: red;
+}
+
+#nav1
+{
+    background-color: aqua;
+    opacity: 1.5;
+    filter: (opacity=50);
+}
+
+#navBillede
+{
+    opacity: 100;
+    filter: (opacity=100);
+}
+
+body{
+    position: relative;
+}
+
+.anchorSection{
+    margin-top: -5.5%;
+    padding-top: 12.5%;
+    min-height: 110vh;
+}
+
+.thisImage{
+    object-fit: contain;
+    width: 50%;
+    height: auto;
+}
+
+
+.collapsible{
+    cursor: pointer;
+}
+
+.content{
+    display: none;
+    overflow: hidden;
+}
+
+.grid {
+    cursor: pointer;
+}
+
+.grid:hover {
+    opacity: 50%;
+}
+
+.galleryPopup {
+    width: 100%;
+}
+.modal-dialog {
+    max-width: 80%;
+}
+.modal-body {
+    display: flex;
+}
+.modal-body img {
+    object-fit: contain;
+}
