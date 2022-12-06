@@ -33,6 +33,10 @@
     justify-content: center;
 }
 
+.aboutCenter {
+    color: black;
+}
+
 .visible {
     display: block;
 }
