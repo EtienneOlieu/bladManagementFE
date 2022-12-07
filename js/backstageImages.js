@@ -14,7 +14,7 @@
             backstageGrid.setAttribute('class', 'col-md-4 gallery');
 
             let url = `${data[i].imageURL}`;
-            backstageGrid.innerHTML = `<img class="img-thumbnail grid" src=${url} onclick="showImage('${url}')"><br><br>`;
+            backstageGrid.innerHTML = `<img class="img-thumbnail grid" src=${url} onclick="showImage('${url}')" data-bs-toggle="modal" data-bs-target="#popupImage"><br><br>`;
             gallery.appendChild(backstageGrid);
         }
     }
