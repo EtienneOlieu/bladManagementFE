@@ -56,7 +56,7 @@
     width: 100%;
 }
 .modal-dialog {
-    max-width: 80%;
+    max-width: 50%;
 }
 .modal-body {
     display: flex;
