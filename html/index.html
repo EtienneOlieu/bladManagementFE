@@ -20,8 +20,8 @@
   <script src="../js/navbarOffset.js"></script>
 
   <script src="../js/aboutBM.js" type="text/javascript"></script>
+  <script src="../js/artistSlideTemplate.js" type="text/javascript"></script>
   <script src="../js/artistSlides.js" type="text/javascript"></script>
-  <script src="../js/carouselTemplate.js" type="text/javascript"></script>
   <script src="../js/backstageImages.js" type="text/javascript"></script>
 
   <script src="../js/router.js" type="text/javascript"></script>
@@ -31,7 +31,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#bm_navbar_id" data-bs-root-margin="{1000px}" tabindex="0"
-  onload="carouselClass.loadFromDocument()" onload="aboutClass.updatePage()">
+  onload="artistSlideBuilder.artistSlideShow()" onload="aboutClass.updatePage()">
 
   <div id="homePage">
 
@@ -83,7 +83,7 @@
       <div class="container">
         
         <!--Target for image templates-->
-        
+        <div id="artistTarget"></div>
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -91,6 +91,8 @@
         
         <div class="row"> 
           <!--Target for thumbnail templates-->
+          <div id="thumbnailTarget"></div>
+
         </div>
       </div>
 
@@ -287,8 +289,8 @@
 
     <template id="artistSlideshow">
       <div class="artistSlides">
-        <div class="numbertext"> current slide/total slides </div>
-          <div class="divWithImage" style="background-image:url()">  </div>
+        <div id="thisNumberText" class="numbertext"> current slide/total slides </div>
+          <div id="divWithImage" style="background-image:url()">  </div>
       </div>
     </template>
 
