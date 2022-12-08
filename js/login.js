@@ -1,24 +1,18 @@
-class Login {
 
-    constructor() {
+async function getCredentials() {
+    let response = await fetch("http://localhost:8080/login");
+    let data = await response.json();
+    console.log(data.username);
+    console.log(data.password);
+
+    const username = document.getElementById('adminusername').value;
+    const password = document.getElementById('adminpassword').value;
+    
+    if ((username === data.username) && (password === data.password)) {
+        alert('success');
+    } 
+    if ((username !== data.username) && (password !== data.password)) {
+        alert ('failed to log in')
     }
-
-    async getLoginCredentials() {
-        let response = await fetch('http://localhost:8080/login');
-        let credentials = await response.json();
-
-        const username = document.getElementById('admin-username').value;
-        const password = document.getElementById('admin-password').value;
-
-        if (username === credentials.username && password === credentials.password) {
-            alert("yah");
-        }
-        else {
-            alert("booh");
-        }
-
-
-    }
-
 }
-let login = new Login();
+
