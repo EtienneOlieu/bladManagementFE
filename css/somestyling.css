@@ -31,3 +31,24 @@
     background: #373737;
     color: rgb(255, 255, 255);
   }
+
+  .fa-tiktok{
+    background: #373737;
+    color: rgb(255, 255, 255);
+  }
+
+  .fa-brands{
+    background: #373737;
+    color: rgb(255, 255, 255);
+  }
+
+  .someImage{
+    width: 30px;
+    height: auto;
+    text-align: center;
+  }
+
+  .someBox{
+    display: flex;
+    justify-content: space-evenly;
+  }

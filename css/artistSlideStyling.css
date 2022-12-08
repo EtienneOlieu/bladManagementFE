@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+    max-width: 1563px;
+    
+}
+
+
+
+/*Hides the images by default */
+.artistSlides {
+    display: none;
+    height: 65vh;
+    width:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*add a pointer when hovering over the thumbnail images*/
+.cursor{
+    cursor: pointer;
+}
+
+/* next and previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    
+}
+
+/* Position the "next button" to the right */
+.next{
+    right: 1%;
+    border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover{
+    opacity: 0.9;
+    color: black;
+    
+
+}
+
+/* number text eg(1/5) */
+.numberText{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    height:  400px;
+    background-size: contain;
+    
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* five columns for the artist */
+.column {
+    float: left;
+    width: 20%;
+}
+
+/* add a transparency effect for thumbnail images */
+.demo{
+    opacity: 0.6;
+    height: 200px;
+    width: auto;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+#thumbnailTarget{
+    background-color:black;
+    
+}

@@ -6,7 +6,6 @@
 .red .active a:hover{
     background-color: red;
 }
-
 #nav1
 {
     background-color: aqua;
@@ -25,9 +24,7 @@ body{
 }
 
 .anchorSection{
-    margin-top: -5.5%;
-    padding-top: 5.5%;
-    min-height: 110vh;
+    min-height: 100vh;
 }
 
 .carousel {
@@ -50,7 +47,7 @@ body{
     height: auto;
 }
 #artistHeading{
-    background-color: rgb(201, 3, 3);
+    background-color: black;
 }
 #galleryHeading{
     background-color: rgb(175, 0, 0);
@@ -68,8 +65,20 @@ body{
 .collapsible{
     cursor: pointer;
 }
-
 .content{
     display: none;
     overflow: hidden;
 }
+#bm_navbar{
+    position: fixed;
+    font-size: 120%;
+    width:40%;
+}
+#bm_navbar a{
+    z-index: 2000;
+    color: white;
+}
+/* .navbar-brand{
+    font-size: 5em;
+} */
+
