@@ -70,3 +70,13 @@ body{
 .modal-body img {
     object-fit: contain;
 }
+
+#bm_navbar{
+    position: fixed;
+    font-size: 120%;
+    width:40%;
+}
+#bm_navbar a{
+    z-index: 2000;
+    color: white;
+}
