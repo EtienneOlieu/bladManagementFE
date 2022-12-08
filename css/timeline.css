@@ -55,19 +55,19 @@
   left: 0px;
 }
 .timeline .timeline-item .timeline-badge.primary {
-  background-color: #bbdefb;
+  background-color: lightblue;
 }
 .timeline .timeline-item .timeline-badge.info {
-  background-color: #26c6da;
+    background-color: lightblue;
 }
 .timeline .timeline-item .timeline-badge.success {
-  background-color: #80deea;
+    background-color: lightblue;
 }
 .timeline .timeline-item .timeline-badge.warning {
-  background-color: #a7ffeb;
+    background-color: lightblue;
 }
 .timeline .timeline-item .timeline-badge.danger {
-  background-color: #42a5f5;
+    background-color: lightblue;
 }
 .timeline .timeline-item .timeline-panel {
   position: relative;
@@ -95,13 +95,13 @@
 .timeline .timeline-item .timeline-panel .timeline-title {
   margin-top: 0;
   font-size: 25px;
-  font-family: "Waiting for the Sunrise", cursive;
+  font-family: Arial;
   color: #0c0c0c;
 }
 .timeline .timeline-item .timeline-panel .timeline-body > p,
 .timeline .timeline-item .timeline-panel .timeline-body > ul {
   margin-bottom: 0;
-  font-family: "Cinzel", sans-serif;
+  font-family: Arial;
   color: #a79898;
 }
 .timeline .timeline-item .timeline-panel .timeline-body > p + p {
