@@ -16,18 +16,15 @@ class TemplateHandler {
 
             let artistTemplate = document.querySelector('#artistSlideshow')
             let artistClone = artistTemplate.content.cloneNode(true)
-            console.log(artistClone.querySelector(".artistSlides"))
             
             let artistDescriptionRoot = artistClone.querySelector(".artistDescription")
             let iFrameRoot = artistClone.querySelector("iframe")
-            console.log(artistClone.querySelector("iframe"))
 
             let agentRoot = artistClone.querySelector('#agentInfo')
             let facebookRoot = artistClone.querySelector('#facebookLink')
             let instagramRoot = artistClone.querySelector('#instagramLink')
             let tikTokRoot = artistClone.querySelector('#tikTokLink')
             let spotifyRoot = artistClone.querySelector('#spotifyLink')
-            console.log(data[artistIndex].description)
             artistDescriptionRoot.textContent = data[artistIndex].description
             iFrameRoot.setAttribute("src",data[artistIndex].youtubeLink)
             agentRoot.textContent = data[artistIndex].agent
@@ -69,6 +66,7 @@ class TemplateHandler {
         }
 
         showSlides(slideindex)
+        textOverImage()
     }
 
 }

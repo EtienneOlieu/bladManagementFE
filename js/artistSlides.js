@@ -34,9 +34,6 @@ function showSlides(n){
 
     slideindex = n
 
-    console.log(slides)
-    console.log(slides.length)
-
     if (n>slides.length){
         slideindex = 1
     } 
@@ -53,3 +50,22 @@ function showSlides(n){
     slides[slideindex-1].style.display = "block";
     dots[slideindex-1].className += " active";
 }
+
+function textOverImage(){
+    console.log("test2")
+    var textOverImages=document.querySelectorAll(".artistSlides div")
+    console.log(textOverImages)
+    for(var i=0; i<textOverImages.length; i++){
+        textOverImages[i].onclick = function (){
+            this.classList.toggle("show");
+        }
+    }
+    // var backgroundToFade = document.querySelectorAll(".artistSlides")
+    // for(var i=0; i<backgroundToFade.length; i++){
+    //     backgroundToFade[i].onclick = function (){
+    //         this.classList.toggle("show");
+    //     }
+    // }
+
+}
+

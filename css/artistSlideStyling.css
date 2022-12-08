@@ -18,7 +18,39 @@
     width:auto;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 1s;
 }
+
+
+
+.hideAndShow {
+    padding-top: 10%;
+    display:flex;
+    justify-content: center;
+    opacity: 0;
+    color: aliceblue;
+    transition: 1s;
+    cursor: pointer;
+
+}
+
+.hideAndShow.show {
+    opacity: 1;
+}
+/* .artistSlides.show {
+    opacity: 0.5;
+} */
+
+.artistDescription{
+    width: 50%;
+    padding-left: 20%;
+}
+.restOfArtist {
+    position: relative;
+    right: 10%;
+}
+
+
 
 /*add a pointer when hovering over the thumbnail images*/
 .cursor{
@@ -40,6 +72,7 @@
     user-select: none;
     -webkit-user-select: none;
     text-decoration: none;
+    z-index: 1031;
     
 }
 
