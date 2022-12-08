@@ -4,6 +4,7 @@ class Login {
     }
 
     async getLoginCredentials() {
+        
         let response = await fetch('http://localhost:8080/login');
         let credentials = await response.json();
 
@@ -11,14 +12,14 @@ class Login {
         const password = document.getElementById('admin-password').value;
 
         if (username === credentials.username && password === credentials.password) {
-            window.location.href = "../html/success.html";
+            window.location.href = "../html/administer.html";
         }
         else {
-            window.location.href = "../html/failure.html";
+            alert('Failed to log in');
         }
 
 
     }
 
 }
-let login = new Login();
+let loginadmin = new Login();
