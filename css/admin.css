@@ -1,0 +1,9 @@
+.adminOptions{
+    display: flex;
+    flex-direction: column;
+}
+
+.eventOptions{
+    display: flex;
+    flex-direction: column;
+}
