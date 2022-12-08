@@ -16,11 +16,38 @@ class TemplateHandler {
 
             let artistTemplate = document.querySelector('#artistSlideshow')
             let artistClone = artistTemplate.content.cloneNode(true)
-            let numberTextRoot = artistClone.querySelector('#thisNumberText')
-            let imageDivRoot = artistClone.querySelector('#divWithImage')
-            let currentNumberText = artistIndex + 1 + "/" + artistIndex.length + 1
+            console.log(artistClone.querySelector(".artistSlides"))
             
-            numberTextRoot.textContent = currentNumberText
+            let artistDescriptionRoot = artistClone.querySelector(".artistDescription")
+            let iFrameRoot = artistClone.querySelector("iframe")
+            console.log(artistClone.querySelector("iframe"))
+
+            let agentRoot = artistClone.querySelector('#agentInfo')
+            let facebookRoot = artistClone.querySelector('#facebookLink')
+            let instagramRoot = artistClone.querySelector('#instagramLink')
+            let tikTokRoot = artistClone.querySelector('#tikTokLink')
+            let spotifyRoot = artistClone.querySelector('#spotifyLink')
+            console.log(data[artistIndex].description)
+            artistDescriptionRoot.textContent = data[artistIndex].description
+            iFrameRoot.setAttribute("src",data[artistIndex].youtubeLink)
+            agentRoot.textContent = data[artistIndex].agent
+            if(data[artistIndex].facebookLink != null){
+                facebookRoot.setAttribute("href",data[artistIndex].facebookLink)
+            }
+            if(data[artistIndex].instagramLink != null){
+                
+                instagramRoot.setAttribute("href",data[artistIndex].instagramLink)
+            }
+            if(data[artistIndex].tikTokLink != null){
+               
+                tikTokRoot.setAttribute("href",data[artistIndex].tikTokLink)
+            }
+            if(data[artistIndex].spotifyLink != null){
+                
+                spotifyRoot.setAttribute("href",data[artistIndex].spotifyLink)
+            }
+
+            //numberTextRoot.textContent = currentNumberText
             artistClone.querySelector(".artistSlides").setAttribute("style", "background-image:url('" + data[artistIndex].imageLink + "')")
             
 
@@ -35,6 +62,7 @@ class TemplateHandler {
 
             let targetArtist = document.querySelector('#artistTarget')
             targetArtist.appendChild(artistClone)
+
             let targetThumbnail = document.querySelector('#thumbnailTarget')
             targetThumbnail.appendChild(thumbnailClone)
 

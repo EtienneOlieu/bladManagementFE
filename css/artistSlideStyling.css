@@ -15,6 +15,9 @@
 .artistSlides {
     display: none;
     height: 65vh;
+    width:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*add a pointer when hovering over the thumbnail images*/
@@ -64,7 +67,6 @@
     top: 0;
     height:  400px;
     background-size: contain;
-    background-repeat: no-repeat;
     
 }
 
