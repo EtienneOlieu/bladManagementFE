@@ -10,7 +10,7 @@ class TimelineHandler {
         let response = await fetch(this.endpointUrl);
         this.events = await response.json();
         this.events.sort(function(a, b){
-            return a.id - b.id;
+            return new Date(a.date) - new Date(b.date);
         }); //Maybe the sort can be done in the fetch?
 
         this.updatePage();
@@ -36,7 +36,7 @@ class TimelineHandler {
                       <div class="timeline-body">
                       <img src="${this.events[index].imageUrl}" class="img-timeline">
                         <p>${this.events[index].description}</p>
-                        <p><a href=${this.events[index].facebookLink}>${this.events[index].facebookLink}</a></p>
+                        <p><a href=${this.events[index].facebookLink}>See on facebook</a></p>
                       </div>
                     </div>
             `;
