@@ -19,10 +19,10 @@
 <body>
     <h2>Login</h2>
 
-    <form id="form-login">
+    <form id="form-login" action="javascript:login.getLoginCredentials()">
         <input type="text" id="admin-username" placeholder="Username">
         <input type="text" id="admin-password" placeholder="Password">
-        <button onclick="login.getLoginCredentials()">Login</button>
+        <button type="submit">Login</button>
     </form>
     
 </body>

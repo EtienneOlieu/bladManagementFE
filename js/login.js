@@ -11,10 +11,10 @@ class Login {
         const password = document.getElementById('admin-password').value;
 
         if (username === credentials.username && password === credentials.password) {
-            alert("yah");
+            window.location.href = "../html/success.html";
         }
         else {
-            alert("booh");
+            window.location.href = "../html/failure.html";
         }
 
 
