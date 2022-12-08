@@ -54,9 +54,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#eventsHeading">Events</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#aboutHeading">About</a>
-                </li>
+                
                 <li class="nav-item">
                   <a class="nav-link" href="#">Shop</a>
                 </li>
@@ -101,36 +99,7 @@
       Events
     </section>
 
-    <section id="aboutHeading" class="anchorSection">
-      <div class="row text-white bg-secondary visitCards">
-        <div class="col-7 ">
-          <div>
-            <h2>Blad Management</h2>
-            <p>We are.....</p>
-          </div>
-        </div>
 
-        <div class="col-5">
-          <div id="visitCards">
-            <template id="visitCardTemplate">
-              <div class="row ">
-                <div class="col-5">
-                  <img>
-                  <!--we need to update the src-->
-                </div>
-                <div class="col-7">
-                  <div class="row" id="visitCardInfo">
-                    fullName is firstName and lastName
-                  </div>
-                  <div class="row" id="visitCardEmail">
-                    converted string
-                  </div>
-                </div>
-            </template>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="contactHeading" class="anchorSection">
       Contact Information
@@ -230,60 +199,8 @@
   </div>
 
 
-  <div id="galleryPage" class="hidden" data-bs-toggle="modal" data-bs-target="#popupImage">
-    <div id="bm_navbar_id">
-      <nav id="bm_navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark px-4">
-        <a class="navbar-brand" href="#homeHeading">
-          <img src="https://drive.google.com/uc?export=view&id=1s5mPyFmxfKNGDl48i28y9lSv-vSPm74Q" width="60" height="60"
-            class="img-thumbnail">
-        </a>
-        <ul class="nav">
-          <li class="nav-item">
-            <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href='javascript:;' onclick="switchPage('#homePage');">Home</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
  
-    <h3 style="color: black">This is the gallery</h3>
-    <!--Upload backtage photos dynamically-->
-    <div class="row" id="backstageGrid">
-      images here
-    </div>
-
-    <div class="modal bg-dark bg-opacity-75 fade" id="popupImage" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body" id="modalBody"></div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-
 <!-- TEMPLATES FROM HERE: -->
-   <template id="carouselContent">
-      <div id="isItemActive" class="carousel-item" href="javascript:;"
-        onclick="carouselClass.getArtistName(window.document.activeElement.innerText)">
-        <img class="thisImage" src="..." class="..." alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <div id="thisArtistName">
-
-          </div>
-        </div>
-      </div>
-    </template>
 
     <template id="artistSlideshow">
       <div class="artistSlides" > 
@@ -323,36 +240,6 @@
       
     </template>
 
-
-  <template id="artistExpanded">
-    <div class="d-flex">
-
-      <div class="container justify-content-center">
-        <div id="artistName" class="row justify-content-center"></div>
-
-        <div id="description" class="row align-self-center"></div>
-
-        <iframe class="row justify-content-center" width="560" height="315" src="..."></iframe>
-
-        <div id="agentInfo" class="row justify-content-center"></div>
-
-        <div class="container row justify-content-evenly">
-          <div class="col-sm">
-            <a id="facebookLink" href="..." class="fa fa-facebook"></a>
-          </div>
-
-          <div class="col-sm">
-            <a id="instagramLink" href="..." class="fa fa-instagram"></a>
-          </div>
-
-          <div class="col-sm">
-            <a id="spotifyLink" href="..." class="fa fa-spotify"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </template>
 <!-- TO HERE: -->
 
 <script src="../js/artistSlideTemplate.js" type="text/javascript"></script>
