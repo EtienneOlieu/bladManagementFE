@@ -1,4 +1,4 @@
-let data;
+let artistData;
 
 class TemplateHandler {
 
@@ -10,9 +10,9 @@ class TemplateHandler {
 
     async artistSlideShow() {
         let response = await fetch(this.endpointURL);
-        data = await response.json();
+        artistData = await response.json();
 
-        for (const artistIndex in data) {
+        for (const artistIndex in artistData) {
 
             let artistTemplate = document.querySelector('#artistSlideshow')
             let artistClone = artistTemplate.content.cloneNode(true)
@@ -25,34 +25,34 @@ class TemplateHandler {
             let instagramRoot = artistClone.querySelector('#instagramLink')
             let tikTokRoot = artistClone.querySelector('#tikTokLink')
             let spotifyRoot = artistClone.querySelector('#spotifyLink')
-            artistDescriptionRoot.textContent = data[artistIndex].description
-            iFrameRoot.setAttribute("src",data[artistIndex].youtubeLink)
-            agentRoot.textContent = data[artistIndex].agent
-            if(data[artistIndex].facebookLink != null){
-                facebookRoot.setAttribute("href",data[artistIndex].facebookLink)
+            artistDescriptionRoot.textContent = artistData[artistIndex].description
+            iFrameRoot.setAttribute("src",artistData[artistIndex].youtubeLink)
+            agentRoot.textContent = artistData[artistIndex].agent
+            if(artistData[artistIndex].facebookLink != null){
+                facebookRoot.setAttribute("href",artistData[artistIndex].facebookLink)
             }
-            if(data[artistIndex].instagramLink != null){
+            if(artistData[artistIndex].instagramLink != null){
                 
-                instagramRoot.setAttribute("href",data[artistIndex].instagramLink)
+                instagramRoot.setAttribute("href",artistData[artistIndex].instagramLink)
             }
-            if(data[artistIndex].tikTokLink != null){
+            if(artistData[artistIndex].tikTokLink != null){
                
-                tikTokRoot.setAttribute("href",data[artistIndex].tikTokLink)
+                tikTokRoot.setAttribute("href",artistData[artistIndex].tikTokLink)
             }
-            if(data[artistIndex].spotifyLink != null){
+            if(artistData[artistIndex].spotifyLink != null){
                 
-                spotifyRoot.setAttribute("href",data[artistIndex].spotifyLink)
+                spotifyRoot.setAttribute("href",artistData[artistIndex].spotifyLink)
             }
 
             //numberTextRoot.textContent = currentNumberText
-            artistClone.querySelector(".artistSlides").setAttribute("style", "background-image:url('" + data[artistIndex].imageLink + "')")
+            artistClone.querySelector(".artistSlides").setAttribute("style", "background-image:url('" + artistData[artistIndex].imageLink + "')")
             
 
             let thumbnailTemplate = document.querySelector('#artistSlideThumbnail')
             let thumbnailClone = thumbnailTemplate.content.cloneNode(true)
             let imageRoot = thumbnailClone.querySelector("img")
 
-            imageRoot.setAttribute("src", data[artistIndex].imageLink)
+            imageRoot.setAttribute("src", artistData[artistIndex].imageLink)
             let number = artistIndex
             number++
             imageRoot.setAttribute("onclick", "currentSlide(" + number + ")")

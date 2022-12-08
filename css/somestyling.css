@@ -48,6 +48,12 @@
     text-align: center;
   }
 
+  .someImageL{
+    width: 60px;
+    height: auto;
+
+  }
+
   .someBox{
     display: flex;
     justify-content: space-evenly;
