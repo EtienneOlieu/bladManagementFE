@@ -9,6 +9,9 @@ class TimelineHandler {
     async fetchData() {
         let response = await fetch(this.endpointUrl);
         this.events = await response.json();
+        this.events.sort(function(a, b){
+            return a.id - b.id;
+        }); //Maybe the sort can be done in the fetch?
 
         this.updatePage();
     };
@@ -31,36 +34,15 @@ class TimelineHandler {
                         ${this.events[index].date}</h4>
                       </div>
                       <div class="timeline-body">
-                      <img src="${this.events[index].imageUrl}" class="img-thumbnail">
+                      <img src="${this.events[index].imageUrl}" class="img-timeline">
                         <p>${this.events[index].description}</p>
-                        <p>${this.events[index].description}</p>
-                        <p>${this.events[index].facebookLink}</p>
+                        <p><a href=${this.events[index].facebookLink}>${this.events[index].facebookLink}</a></p>
                       </div>
                     </div>
             `;
-
             listElement.innerHTML=targetContent;
 
-            target.appendChild(listElement);
-            
-            /*
-            let template = document.querySelector('#timeline-template')
-            let clone = template.content.cloneNode(true)
-
-            let date = clone.querySelector('timeline-title')
-            date.textContent = `${this.events[index].data}`
-
-             let image = clone.querySelector('img')
-            image.className = 'visitCardFoto'
-            image.setAttribute("src", `${this.employees[index].imgURL}`)
-
-            let fullName = clone.querySelector('#visitCardInfo')
-            fullName.textContent = `${this.employees[index].firstName}` + " " + `${this.employees[index].lastName}`
-
-            let email = clone.querySelector('#visitCardEmail')
-            email.textContent = `${this.employees[index].email}` */
-            
-            
+            target.appendChild(listElement);            
         }
     }
 }
