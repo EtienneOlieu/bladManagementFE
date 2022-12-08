@@ -16,12 +16,11 @@
   <link href="../css/aboutBM.css" rel="stylesheet">
   <link href="../css/footer.css" rel="stylesheet">
   <link href="../css/artistSlideStyling.css" rel="stylesheet">
+  <link href="../css/all.css" rel="stylesheet">
   <script src="../js/expandable.js"></script>
   <script src="../js/navbarOffset.js"></script>
 
   <script src="../js/aboutBM.js" type="text/javascript"></script>
-  <script src="../js/artistSlideTemplate.js" type="text/javascript"></script>
-  <script src="../js/artistSlides.js" type="text/javascript"></script>
   <script src="../js/backstageImages.js" type="text/javascript"></script>
 
   <script src="../js/router.js" type="text/javascript"></script>
@@ -36,14 +35,14 @@
   <div id="homePage">
 
     <div id="bm_navbar_id">
-      <nav id="bm_navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark px-4">
+      <nav id="bm_navbar" class="navbar navbar-expand-lg fixed-top navbar-dark px-4">
         <a class="navbar-brand" href="#homeHeading">
           <img src="https://drive.google.com/uc?export=view&id=1s5mPyFmxfKNGDl48i28y9lSv-vSPm74Q" width="60" height="60"
             class="img-thumbnail"></a>
         <ul class="nav">
-          <li class="nav-item">
+          <li class="big-nav-item">
             <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav mr-auto" id="test">
 
                 <li class="nav-item">
                   <a class="nav-link" href="#artistHeading">Artists</a>
@@ -80,16 +79,16 @@
 
     <section id="artistHeading" class="anchorSection">
       <!--Container til artists slideshow-->
-      <div class="container">
+      <div class="container" id="artistContainer">
         
         <!--Target for image templates-->
-        <div id="artistTarget"></div>
+        <div id="artistTarget">
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-        <div class="row"> 
+      </div>
+        <div id=thumbnailID class="row"> 
           <!--Target for thumbnail templates-->
           <div id="thumbnailTarget"></div>
 
@@ -288,8 +287,9 @@
 
     <template id="artistSlideshow">
       <div class="artistSlides">
-        <div id="thisNumberText" class="numbertext"> current slide/total slides </div>
-          <div id="divWithImage" style="background-image:url()">  </div>
+        <div id="thisNumberText" class="numbertext"  > current slide/total slides </div>
+          
+     
       </div>
     </template>
 
@@ -333,6 +333,9 @@
 
   </template>
 <!-- TO HERE: -->
+
+<script src="../js/artistSlideTemplate.js" type="text/javascript"></script>
+<script defer src="../js/artistSlides.js" type="text/javascript"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
