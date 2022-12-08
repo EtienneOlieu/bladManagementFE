@@ -175,3 +175,9 @@
   bottom: 0px;
   left: 43px;
 }
+
+.timeline-block {
+    display:inline-block;
+    width:100%;
+    overflow-y:auto;
+}
