@@ -9,7 +9,7 @@ class TimelineHandler {
     async fetchData() {
         let response = await fetch(this.endpointUrl);
         this.events = await response.json();
-        this.events.sort(function(a, b){
+        this.events.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date);
         }); //Maybe the sort can be done in the fetch?
 
@@ -23,26 +23,27 @@ class TimelineHandler {
             let target = document.querySelector('#ul-timeline')
 
             let listElement = document.createElement('li')
-            listElement.className="timeline-item";
+            listElement.className = "timeline-item";
 
 
             let targetContent = `
                     <div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
                     <div class="timeline-panel">
                       <div class="timeline-heading">
-                        <h4 class="timeline-title">
+                        <h4 class="timeline-title timeline-centered">
                         ${this.events[index].date}</h4>
                       </div>
                       <div class="timeline-body">
-                      <img src="${this.events[index].imageUrl}" class="img-timeline">
-                        <p>${this.events[index].description}</p>
-                        <p><a href=${this.events[index].facebookLink}>See on facebook</a></p>
+                        <div><img src="${this.events[index].imageUrl}" class="timeline-img"></div>
+                        <div style="height: 100px";>${this.events[index].description}</div>
+                        <div class="timeline-centered"><a href=${this.events[index].facebookLink}>Click here to see on facebook</a></div>
+                        
                       </div>
                     </div>
             `;
-            listElement.innerHTML=targetContent;
+            listElement.innerHTML = targetContent;
 
-            target.appendChild(listElement);            
+            target.appendChild(listElement);
         }
     }
 }

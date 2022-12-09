@@ -182,6 +182,10 @@
     overflow-y:auto;
 }
 
-.img-timeline {
+.timeline-img {
     height: 250px;
+}
+
+.timeline-centered {
+    text-align: center;
 }
