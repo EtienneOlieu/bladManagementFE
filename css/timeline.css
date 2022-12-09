@@ -7,6 +7,9 @@
   padding: 20px;
   position: relative;
 }
+.timeline {
+  margin-top: 8%;
+}
 .timeline:before {
   top: 40px;
   bottom: 0;
