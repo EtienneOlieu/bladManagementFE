@@ -1,4 +1,71 @@
 #shopID{
     background-color: black;
     min-height: 100vh;
+    overflow: auto;
+}
+
+#shopContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+#productContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 70vw;
+    min-height: 84vh;
+    margin-top: 11vh;
+    margin-bottom: 5vh;
+   margin-left: 5vh;
+
+
+    /*these are for work purposes*/
+    border-color: aqua;
+    border-style: dashed;
+    border-width: 3px;
+}
+
+.card{
+    max-width: 20vw;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2vh;
+    border-radius: 0%;
+    border:rgb(0, 0, 0)
+}
+
+.price{
+    color: rgb(180, 180, 180);
+    font-size: 2rem;
+}
+
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.card button:hover{
+    opacity: 0.7;
+}
+
+#cart{
+    color: azure;
+     /*these are for work purposes*/
+     position: fixed;
+     border-color: rgb(255, 0, 242);
+     border-style: dashed;
+     border-width: 3px;
+     min-height: 84vh;
+     margin-top: 11vh;
+     margin-bottom: 5vh;
+    margin-right: 5vh;
 }
