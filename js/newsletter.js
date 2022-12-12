@@ -28,13 +28,19 @@ class Newsletter{
 
         let emailInput = document.getElementById('emailInput').value;
         
+        let found = 0;
+        
         data.forEach(element => {
             if (element.email === emailInput){
+                found = 1;
+                console.log(found);
                 this.unsubscribe(element.id);
-            } else {
-                alert('Email not found');
+                alert('Email deleted');
             } 
         });
+        if (found == 0) {
+            alert('Email not found');
+        }
     }
 
     async unsubscribe(id){
