@@ -3,9 +3,10 @@ class ConcertModal {
     constructor() {
     }
     
-    showModal() { 
+    showModal(t) { 
 
-        alert("here")
+        const modal = document.getElementById('modalBodyAdmin');
+        modal.innerHTML  = `"${t}"`;
 
         /* let count = {}
 
