@@ -14,22 +14,51 @@
 
     <script src="../js/event.js" defer></script>
     <script src="../js/router.js" defer></script>
+    <script src="../js/concert-modal.js" defer></script>
 
 </head>
 <body>
 
     <div class="container">
+
+        <!-- This is the left column which shows the relevant buttons to switch the right column display -->
         <div class="row">
-            <div class="col-3">
+            <div class="col-6">
                 <div class="adminOptions">
-                    <h1>Administer</h1><br><br>
-                    <button class="btn btn-dark">Order(s)</button><br>
-                    <button class="btn btn-dark">Stock</button><br>
-                    <button class="btn btn-dark">Artist(s)</button><br>
-                    <button class="btn btn-dark" onclick="">Event(s)</button><br>
-                    <button class="btn btn-dark">Backstage Images</button>
+                    <h2>Admin options</h2><br><br>
+                    <button class="btn btn-dark">Order(s)</button><br><br>
+                    <button class="btn btn-dark">Stock</button><br><br>
+                    <button class="btn btn-dark">Artist(s)</button><br><br>
+                    <button class="btn btn-dark">Event(s)</button><br><br>
+                    <button class="btn btn-dark">Backstage Images</button><br><br>
                 </div>
             </div>
+
+            <!-- This is the right column which shows the relevant buttons to open a modal for each crud functionality -->
+            <div class="col-6">
+                <h2>CRUD options</h2><br><br>
+                    <button class="btn btn-dark" onclick="concertModal.showModal('Edit')">Create</button><br><br>
+                    <button class="btn btn-dark">Read</button><br><br>
+                    <button class="btn btn-dark">Update</button><br><br>
+                    <button class="btn btn-dark">Delete</button><br><br>
+
+                    <div class="modal bg-dark bg-opacity-75 hide" id="popupImage" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn btn-dark" onclick="decrementCount()"><</button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close"><span>X</span></button>
+                                    <button class="btn btn-dark" onclick="incrementCount()">></button>
+                                </div>
+                                <div class="modal-body" id="modalBody">                            
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
             <div class="col-9">
                 <div id="edit-orders"></div>
                 <div id="edit-stock"></div>
