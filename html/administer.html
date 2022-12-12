@@ -36,11 +36,11 @@
                 </div>
             </div>
 
-            <!-- This is the right column which shows the relevant buttons to open a modal for each crud functionality -->
-            <div class="col-6">
+            <!-- This is the right column which shows the relevant buttons to open a modal for each crud functionality
+            This column should be switched as a type of single page -->
+            <div class="col-6" id="optionsPage">
                 <h2>CRUD options for 'Events'</h2><br><br>
-                <button class="btn btn-dark"
-                    onclick="concertModal.showModal('Modal body content')"
+                <button class="btn btn-dark" onclick="concertModal.showModal('Create new event')"
                      data-bs-toggle="modal" data-bs-target="#popupAdmin">Create</button><br><br>
                 <button class="btn btn-dark">Read</button><br><br>
                 <button class="btn btn-dark">Update</button><br><br>
@@ -52,7 +52,6 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    Header
                                 </div>
                                 <div class="modal-body" id="modalBodyAdmin">
                                 </div>
@@ -65,22 +64,7 @@
                 </div>
             </div>
 
-            <div class="col-9">
-                <div id="edit-orders"></div>
-                <div id="edit-stock"></div>
-                <div id="edit-artists"></div>
-                <div class="eventOptions" id="edit-events">
-                    <form id="form-events" action="javascript:eventhandler.createEvent()">
-                        <textarea type="text" id="event-description" rows="5" cols="50"
-                            placeholder="description"></textarea><br>
-                        <input type="date" id="event-date"><br>
-                        <input type="text" id="event-url" placeholder="image link"><br>
-                        <input type="text" id="event-facebookLink" placeholder="facebook link"><br>
-                        <button class="btn btn-success" type="submit">Submit event</button>
-                    </form>
-                </div>
-                <div id="edit-images"></div>
-            </div>
+            
         </div>
     </div>
 

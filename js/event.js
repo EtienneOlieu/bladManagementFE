@@ -23,6 +23,7 @@ class EventHandler{
             },
             body: JSON.stringify(eventObject)
         });
+        alert("Event created")
     }    
 }
 let eventhandler = new EventHandler();
