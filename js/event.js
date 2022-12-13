@@ -24,7 +24,18 @@ class EventHandler{
             body: JSON.stringify(eventObject)
         });
         alert("Event created")
-    }    
+    }   
+    
+    async deleteEvent(id){
+    
+        await fetch(`http://localhost:8080/delete/event/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+        alert("Event deleted")
+    }   
 }
 let eventhandler = new EventHandler();
 

@@ -1,9 +1,24 @@
 class EventModal {
 
+    events= [];
+    currentEvent;
+
     constructor() {
     }
 
+    async getAllEvents(){
+        let response = await fetch('http://localhost:8080/get/allEvents');
+        this.currentEvent = 0;
+        this.events = await response.json();
+        this.events.sort(function (a, b) {
+            return new Date(a.date) - new Date(b.date);
+        });
+    }    
+
+    // Buttons right
     showButtons() {
+
+        this.getAllEvents();
 
         // Context relevant title and list of buttons
         const optionsTitle = document.getElementById('optionsTitle');
@@ -39,9 +54,18 @@ class EventModal {
                 break;
             }
             case "Delete": {
-                modalHeader[0].innerHTML = `<h2>Delete event...</h2>`
-                modalBody.innerHTML = `Code here to select and delete an event`;
-                modalFooter[0].innerHTML = `<button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Cancel</button>`;
+                modalHeader[0].innerHTML = `<h2>Delete event...</h2><button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Cancel</button>`
+
+                modalBody.innerHTML = `
+                <h2>${this.events[this.currentEvent].date}</h2>
+                <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
+                <div>${this.events[this.currentEvent].description}</div>
+                <button class="btn btn-danger" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
+                `;
+
+                modalFooter[0].innerHTML = `
+                <button class="btn btn-dark" onclick="eventModal.decrementCount()"><</button>
+                <button class="btn btn-dark" onclick="eventModal.incrementCount()">></button>`;
                 break;
             }
             case "Update": {
@@ -53,6 +77,32 @@ class EventModal {
             default: {
             }
         }
+    }
+
+    incrementCount(){
+        this.currentEvent++;
+        if (this.currentEvent > this.events.length-1){
+            this.currentEvent = 0;
+        }
+        document.getElementById('modalBodyAdmin').innerHTML = `
+                <h2>${this.events[this.currentEvent].date}</h2>
+                <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
+                <div>${this.events[this.currentEvent].description}</div>
+                <button class="btn btn-danger" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
+                `;
+    }
+
+    decrementCount(){
+        this.currentEvent--;
+        if (this.currentEvent < 0){
+            this.currentEvent =  this.events.length-1;
+        }
+        document.getElementById('modalBodyAdmin').innerHTML = `
+        <h2>${this.events[this.currentEvent].date}</h2>
+        <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
+        <div>${this.events[this.currentEvent].description}</div>
+        <button class="btn btn-danger" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
+        `;
     }
 }
 
