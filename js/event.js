@@ -27,14 +27,18 @@ class EventHandler{
     }   
     
     async deleteEvent(id){
-    
-        await fetch(`http://localhost:8080/delete/event/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-type': 'application/json'
-            }
-        });
-        alert("Event deleted")
+
+        const confirmDelete = confirm("Are you sure?");
+        if (confirmDelete) {
+            await fetch(`http://localhost:8080/delete/event/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            });
+            alert("Event deleted")
+            eventModal.getAllEvents;
+        }       
     }   
 }
 let eventhandler = new EventHandler();

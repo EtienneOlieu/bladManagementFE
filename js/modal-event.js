@@ -1,19 +1,19 @@
 class EventModal {
 
-    events= [];
+    events = [];
     currentEvent;
 
     constructor() {
     }
 
-    async getAllEvents(){
+    async getAllEvents() {
         let response = await fetch('http://localhost:8080/get/allEvents');
         this.currentEvent = 0;
         this.events = await response.json();
         this.events.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date);
         });
-    }    
+    }
 
     // Buttons right
     showButtons() {
@@ -36,7 +36,7 @@ class EventModal {
         const modalHeader = document.getElementsByClassName('modal-header');
         const modalBody = document.getElementById('modalBodyAdmin');
         const modalFooter = document.getElementsByClassName('modal-footer');
-               
+
         switch (option) {
             case "Create": {
                 modalHeader[0].innerHTML = `<h2>Create new event...</h2>`
@@ -60,7 +60,7 @@ class EventModal {
                 <h2>${this.events[this.currentEvent].date}</h2>
                 <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
                 <div>${this.events[this.currentEvent].description}</div>
-                <button class="btn btn-danger" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
                 `;
 
                 modalFooter[0].innerHTML = `
@@ -79,29 +79,29 @@ class EventModal {
         }
     }
 
-    incrementCount(){
+    incrementCount() {
         this.currentEvent++;
-        if (this.currentEvent > this.events.length-1){
+        if (this.currentEvent > this.events.length - 1) {
             this.currentEvent = 0;
-        }
-        document.getElementById('modalBodyAdmin').innerHTML = `
-                <h2>${this.events[this.currentEvent].date}</h2>
-                <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
-                <div>${this.events[this.currentEvent].description}</div>
-                <button class="btn btn-danger" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
-                `;
-    }
-
-    decrementCount(){
-        this.currentEvent--;
-        if (this.currentEvent < 0){
-            this.currentEvent =  this.events.length-1;
         }
         document.getElementById('modalBodyAdmin').innerHTML = `
         <h2>${this.events[this.currentEvent].date}</h2>
         <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
         <div>${this.events[this.currentEvent].description}</div>
-        <button class="btn btn-danger" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
+        <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
+        `;
+    }
+
+    decrementCount() {
+        this.currentEvent--;
+        if (this.currentEvent < 0) {
+            this.currentEvent = this.events.length - 1;
+        }
+        document.getElementById('modalBodyAdmin').innerHTML = `
+        <h2>${this.events[this.currentEvent].date}</h2>
+        <img src = "${this.events[this.currentEvent].imageUrl}" class="adminModalEventImage">
+        <div>${this.events[this.currentEvent].description}</div>
+        <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="eventhandler.deleteEvent(${this.events[this.currentEvent].id})">Delete</button>
         `;
     }
 }
