@@ -80,3 +80,16 @@
      margin-right: 5vh;
      background-color: rgba(0, 0, 0, 0.5);
 }
+.productName{
+    font-size: 2vw;
+}
+
+.inStock{
+    color: black;
+}
+.lowStock{
+    color: yellow;
+}
+.outOfStock{
+    color: red;
+}
