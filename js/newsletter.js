@@ -27,14 +27,19 @@ class Newsletter{
         let data = await response.json();
 
         let emailInput = document.getElementById('emailInput').value;
+
+        let found = 0;
         
         data.forEach(element => {
             if (element.email === emailInput){
+                found = 1;
                 this.unsubscribe(element.id);
-            } else {
-                alert('Email not found');
-            } 
+                alert('Email deleted')
+            }                
         });
+        if (found == 0) {
+            alert('Email not found');
+        }
     }
 
     async unsubscribe(id){

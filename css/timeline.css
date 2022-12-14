@@ -192,3 +192,7 @@
 .timeline-centered {
     text-align: center;
 }
+
+.adminModalEventImage {
+  width: 50%;
+}

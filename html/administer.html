@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,51 +8,81 @@
     <title>Administer</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    
 
     <link href="../css/admin.css" rel="stylesheet">
+    <link href="../css/timeline.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="../js/event.js" defer></script>
     <script src="../js/router.js" defer></script>
+    <script src="../js/modal-artist.js" defer></script>
+    <script src="../js/modal-event.js" defer></script>
+    <script src="../js/modal-gallery.js" defer></script>
+    <script src="../js/modal-order.js" defer></script>
+    <script src="../js/modal-stock.js" defer></script>
 
 </head>
+
 <body>
 
     <div class="container">
+
+        <!-- This is the left column which shows the relevant buttons to switch the right column display -->
         <div class="row">
-            <div class="col-3">
+            <div class="col-6">
                 <div class="adminOptions">
-                    <h1>Administer</h1><br><br>
-                    <button class="btn btn-dark">Order(s)</button><br>
-                    <button class="btn btn-dark">Stock</button><br>
-                    <button class="btn btn-dark">Artist(s)</button><br>
-                    <button class="btn btn-dark" onclick="">Event(s)</button><br>
-                    <button class="btn btn-dark">Backstage Images</button>
+                    <h2>Admin options</h2><br><br>
+                    <button class="btn btn-dark" onclick="artistModal.showButtons()">Artist(s)</button><br><br>
+                    <button class="btn btn-dark" onclick="eventModal.showButtons()">Event(s)</button><br><br>
+                    <button class="btn btn-dark" onclick="galleryModal.showButtons()">Backstage Images</button><br><br>
+                    <button class="btn btn-dark" onclick="orderModal.showButtons()">Order(s)</button><br><br>
+                    <button class="btn btn-dark" onclick="stockModal.showButtons()">Stock</button><br><br>
                 </div>
             </div>
-            <div class="col-9">
-                <div id="edit-orders"></div>
-                <div id="edit-stock"></div>
-                <div id="edit-artists"></div>
-                <div class="eventOptions" id="edit-events">
-                    <form id="form-events" action="javascript:eventhandler.createEvent()">
-                        <textarea type="text" id="event-description" rows="5" cols="50" placeholder="description"></textarea><br>
-                        <input type="date" id="event-date"><br>
-                        <input type="text" id="event-url" placeholder="image link"><br>
-                        <input type="text" id="event-facebookLink" placeholder="facebook link"><br>
-                        <button class="btn btn-success" type="submit">Submit event</button>
-                    </form>
+
+            <!-- This is the right column which shows the relevant buttons to open a modal for each crud functionality
+            This column should be switched as a type of single page -->
+            <div class="col-6" id="optionsPage">
+
+                <h2 id="optionsTitle"></h2><br><br>
+
+                <div id="optionButtons"></div>
+
+                <div>
+                    <div class="modal bg-dark bg-opacity-75 hide" id="popupAdmin" tabindex="-1" role="dialog"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header"></div>
+                                <div class="modal-body" id="modalBodyAdmin"></div>
+                                <div class="modal-footer"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="edit-images"></div>
+
+                <div>
+                    <div class="modal bg-dark bg-opacity-75 hide" id="popupUpdate" tabindex="-1" role="dialog"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" id="modalHeaderAdminUpdate"></div>
+                                <div class="modal-body" id="modalBodyAdminUpdate"></div>
+                                <div class="modal-footer" id="modalFooterAdminUpdate"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-   
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

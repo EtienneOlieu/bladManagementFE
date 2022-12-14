@@ -23,7 +23,37 @@ class EventHandler{
             },
             body: JSON.stringify(eventObject)
         });
-    }    
+        alert("Event created")
+    }   
+    
+    async deleteEvent(id){
+
+        const confirmDelete = confirm("Are you sure?");
+        if (confirmDelete) {
+            await fetch(`http://localhost:8080/delete/event/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            });
+            alert("Event deleted")
+            eventModal.getAllEvents;
+        }       
+    }
+    
+    async updateEvent(eventObject){
+        const objectasjson = JSON.stringify(eventObject);
+        const confirmUpdate = confirm("Are you sure you want to update event?");
+        if (confirmUpdate){
+            await fetch(`http://localhost:8080/update/event`,{
+                method: 'PUT',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: objectasjson
+            });
+        }
+    }
 }
 let eventhandler = new EventHandler();
 
