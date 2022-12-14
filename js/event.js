@@ -39,7 +39,21 @@ class EventHandler{
             alert("Event deleted")
             eventModal.getAllEvents;
         }       
-    }   
+    }
+    
+    async updateEvent(eventObject){
+        const objectasjson = JSON.stringify(eventObject);
+        const confirmUpdate = confirm("Are you sure you want to update event?");
+        if (confirmUpdate){
+            await fetch(`http://localhost:8080/update/event`,{
+                method: 'PUT',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: objectasjson
+            });
+        }
+    }
 }
 let eventhandler = new EventHandler();
 
