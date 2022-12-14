@@ -39,7 +39,9 @@ class ArtistHandler{
         artistModal.getAllArtists();
     }   
     
-    async deleteEvent(id){
+    async deleteArtist(id){
+
+        alert("what")
 
         const confirmDelete = confirm("Are you sure?");
         if (confirmDelete) {

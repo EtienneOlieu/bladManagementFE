@@ -63,7 +63,7 @@ class ArtistModal {
                 modalBody.innerHTML = `
                 <h2>${this.artists[this.currentArtist].name}</h2>
                 <img src = "${this.artists[this.currentArtist].imageLink}" class="adminModalEventImage"><br>
-                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="artisthandler.deleteEvent(${this.artists[this.currentArtist].id})">Delete</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="artisthandler.deleteArtist(${this.artists[this.currentArtist].id})">Delete</button>
                 `;
 
                 modalFooter[0].innerHTML = `
@@ -90,7 +90,7 @@ class ArtistModal {
         document.getElementById('modalBodyAdmin').innerHTML = `
         <h2>${this.artists[this.currentArtist].name}</h2>
                 <img src = "${this.artists[this.currentArtist].imageLink}" class="adminModalEventImage"><br>
-                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="artisthandler.deleteEvent(${this.artists[this.currentArtist].id})">Delete</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="artisthandler.deleteArtist(${this.artists[this.currentArtist].id})">Delete</button>
                 `;
     }
 
@@ -102,7 +102,7 @@ class ArtistModal {
         document.getElementById('modalBodyAdmin').innerHTML = `
         <h2>${this.artists[this.currentArtist].name}</h2>
                 <img src = "${this.artists[this.currentArtist].imageLink}" class="adminModalEventImage"><br>
-                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="artisthandler.deleteEvent(${this.artists[this.currentArtist].id})">Delete</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" onclick="artisthandler.deleteArtist(${this.artists[this.currentArtist].id})">Delete</button>
                 `;
     }
 }
