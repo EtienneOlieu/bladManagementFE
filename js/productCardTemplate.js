@@ -100,5 +100,4 @@ function removeItem(buttonID){
     let lineItemSumRoot = document.getElementById('lineItemSum');
     let totalTwoDecimals = parseFloat(total).toFixed(2);
     lineItemSumRoot.textContent = totalTwoDecimals;
-    
 }
