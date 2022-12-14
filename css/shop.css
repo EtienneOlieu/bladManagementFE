@@ -1,6 +1,6 @@
 #shopID{
    /* background-image: url("https://drive.google.com/uc?export=view&id=1tN0ePvYeQXt_NRFDT8IlAhDlI30icc_R") ;*/
-   background-color: #f1e5d2;
+   background-color: #9bb9bb;
     min-height: 100vh;
     overflow: auto;
     background-repeat: no-repeat;
@@ -20,33 +20,38 @@
     flex-wrap: wrap;
     max-width: 70vw;
     min-height: 82vh;
-    margin-top: 13vh;
+    margin-top: 11vh;
     margin-bottom: 5vh;
     margin-left: 5vh;
 
 
     /*these are for work purposes*/
-    border-color: aqua;
-    border-style: dashed;
-    border-width: 3px;
+
 }
 
 .card{
     max-width: 20vw;
+    position: relative;
     margin: auto;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 2vh;
     border-radius: 0%;
     border:rgb(0, 0, 0);
-    height: 75vh;
+    height: 85vh;
+    
    
     
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .innerCardText{
     overflow: scroll;
     
+}
+.cardButton{
+    bottom: 0;
+    position: absolute;
+    left: 0;
 }
 
 .price{
@@ -75,11 +80,8 @@
      position: fixed;
      width: 20vw;
      left: 75%;
-     border-color: rgb(255, 0, 242);
-     border-style: dashed;
-     border-width: 3px;
-     min-height: 82vh;
-     max-height: 82vh;
+     min-height: 85vh;
+     max-height: 85vh;
      margin-top: 13vh;
      margin-bottom: 5vh;
      margin-right: 5vh;
@@ -92,18 +94,27 @@
 
 .inStock{
     color: black;
+    position:absolute;
+    bottom: 5vh;
+    left: 41%;
+
 }
 .lowStock{
     color: yellow;
+    position:absolute;
+    bottom: 5vh;
+    left: 38%;
 }
 .outOfStock{
     color: red;
+    position:absolute;
+    bottom: 5vh;
+    left: 36%;
 }
 
 .lineItem{
-    border-color: black;
-    border-radius: 1px;
-    border-style: solid;
+    
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -117,4 +128,39 @@
 .lineItemChild{
     width: 50%;
     
+}
+
+.lineItemFinishOrder{
+    position: absolute;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    left: 0;
+
+}
+
+.lineItemFinishOrder:hover{
+    opacity: 0.7;
+}
+
+.lineItemButton{
+    position: absolute;
+    right: 0;
+    border: none;
+    outline: 0;
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1rem;  
+}
+.lineItemButton:hover{
+    opacity: 0.7;
 }

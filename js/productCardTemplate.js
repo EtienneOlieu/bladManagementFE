@@ -86,8 +86,6 @@ function addToCart(buttonID){
     }
 }
 
-
-
 function removeItem(buttonID){
     let realID = "lineItemID" + buttonID.id
     let divToDelete= document.getElementById(realID);
