@@ -24,6 +24,7 @@ class EventHandler{
             body: JSON.stringify(eventObject)
         });
         alert("Event created")
+        eventModal.getAllEvents();
     }   
     
     async deleteEvent(id){
@@ -37,7 +38,7 @@ class EventHandler{
                 }
             });
             alert("Event deleted")
-            eventModal.getAllEvents;
+            eventModal.getAllEvents();
         }       
     }
     
