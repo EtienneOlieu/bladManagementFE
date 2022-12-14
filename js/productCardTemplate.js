@@ -1,5 +1,7 @@
 let productData;
 let total;
+let cart = [];
+
 endpointUrl = "http://localhost:8080/get/stockItemList"
 
 async function productCardGenerator(){
@@ -40,6 +42,9 @@ async function productCardGenerator(){
 }
 
 function addToCart(buttonID){
+
+    cart.push(buttonID.id)
+    console.log(cart)
     // Total sum
     total = total + productData[buttonID.id -1].product.price;
     let lineItemSumRoot = document.getElementById('lineItemSum');
@@ -86,7 +91,18 @@ function addToCart(buttonID){
     }
 }
 
+
+
 function removeItem(buttonID){
+
+        let testcart = cart.filter(function(x){
+            return x !== buttonID.id;
+        })
+        cart = testcart;
+    
+
+
+
     let realID = "lineItemID" + buttonID.id
     let divToDelete= document.getElementById(realID);
     let divWithNumber = divToDelete.getElementsByClassName("lineItemNumber");
@@ -98,4 +114,8 @@ function removeItem(buttonID){
     let lineItemSumRoot = document.getElementById('lineItemSum');
     let totalTwoDecimals = parseFloat(total).toFixed(2);
     lineItemSumRoot.textContent = totalTwoDecimals;
+}
+
+function finalizeOrder(){
+    
 }
