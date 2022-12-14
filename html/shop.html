@@ -50,53 +50,57 @@
         </div>
         <div id="shopContainer">
         <div id="productContainer">
-            <div class="card">
-                <img src="https://www.shirtstore.dk/pub_images/original/RD-5-FAB002-BK.jpg">
-                <h1 class="productName">Beatles T-shirt L</h1>
-                <p class="price">34.95</p>
-                <p class="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut neque ut diam suscipit venenatis. Ut vulputate justo lacus, sed fringilla felis bibendum vitae. Mauris fermentum dui nec elit vulputate, vitae aliquam tortor tempus. </p>
-                <p><button>Add to Cart</button></p>
-            </div>
+        </div>
+        <div id="cart">
+            <div id="lineItemTarget">
 
-            <div class="card">
-                <img src="https://www.shirtstore.dk/pub_images/original/RD-5-FAB002-BK.jpg">
-                <h1 class="productName">Beatles T-shirt XL</h1>
-                <p class="price">34.95</p>
-                <p class="productDescription outOfStock">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut neque ut diam suscipit venenatis. Ut vulputate justo lacus, sed fringilla felis bibendum vitae. Mauris fermentum dui nec elit vulputate, vitae aliquam tortor tempus. </p>
-                <p><button>Add to Cart</button></p>
             </div>
-
-            <div class="card">
-                <img src="https://www.shirtstore.dk/pub_images/original/RD-5-FAB002-BK.jpg">
-                <h1 class="productName">Beatles T-shirt M</h1>
-                <p class="price">34.95</p>
-                <p class="productDescription lowStock">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut neque ut diam suscipit venenatis. Ut vulputate justo lacus, sed fringilla felis bibendum vitae. Mauris fermentum dui nec elit vulputate, vitae aliquam tortor tempus. </p>
-                <p><button>Add to Cart</button></p>
+            <div id="lineItemSum">
+                
             </div>
-
-            <div class="card">
-                <img src="https://www.shirtstore.dk/pub_images/original/RD-5-FAB002-BK.jpg">
-                <h1 class="productName">Beatles T-shirt S</h1>
-                <p class="price">34.95</p>
-                <p class="productDescription inStock">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut neque ut diam suscipit venenatis. Ut vulputate justo lacus, sed fringilla felis bibendum vitae. Mauris fermentum dui nec elit vulputate, vitae aliquam tortor tempus. </p>
-                <p><button>Add to Cart</button></p>
+            <div>
+                <button class="lineItemFinishOrder">finish order</button>
             </div>
         </div>
-        <div id="cart">HER ER EN INDKØBSKURV!!</div>
+        </div>
     </div>
     </div>
 
    
 </body>
+<template id="itemListTemplate">
+    <div class="lineItem">
+        <div class="lineItemName">
+            navn på produktet
+        </div>
+        <div class="lineItemPrice">
+            49,95
+        </div>
+        <div class="lineItemAmount">
+            <span>
+                antal: 
+            </span>
+            <span class="lineItemNumber">
+                1
+            </span>
+            <span>
+                <button onclick="removeItem(this)">Remove item</button>
+            </span>
+        </div>
+    </div>
+        
+</template>
 
 <template id="productCardTemplate">
     <div class="card">
         <img src="...">
+        <div class="innerCardText">
         <h1 class="productName">TEXT TO BE REPLACED</h1>
         <p class="price">AN APPROPRIATE PRICE</p>
         <p class="productDescription">TEXT TO BE REPLACED</p>
+        </div>
         <p class="inStock">AVAILABILITY</p>
-        <p><button>Add to Cart</button></p>
+        <p><button onclick="addToCart(this)">Add to Cart</button></p>
     </div>
 </template>
 

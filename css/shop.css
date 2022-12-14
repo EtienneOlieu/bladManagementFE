@@ -39,15 +39,19 @@
     margin-top: 2vh;
     border-radius: 0%;
     border:rgb(0, 0, 0);
+    height: 75vh;
+   
     
     background-color: rgba(255, 255, 255, 0);
-
+}
+.innerCardText{
+    overflow: scroll;
     
 }
 
 .price{
     color: rgb(180, 180, 180);
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .card button{
@@ -75,13 +79,15 @@
      border-style: dashed;
      border-width: 3px;
      min-height: 82vh;
+     max-height: 82vh;
      margin-top: 13vh;
      margin-bottom: 5vh;
      margin-right: 5vh;
-     background-color: rgba(0, 0, 0, 0.5);
+     background-color: rgba(0, 0, 0, 0.2);
+     overflow:scroll;
 }
 .productName{
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .inStock{
@@ -92,4 +98,23 @@
 }
 .outOfStock{
     color: red;
+}
+
+.lineItem{
+    border-color: black;
+    border-radius: 1px;
+    border-style: solid;
+}
+
+
+.lineItemFinishOrder{
+    bottom: 0;
+    right: 50%;
+    
+}
+
+
+.lineItemChild{
+    width: 50%;
+    
 }
