@@ -117,7 +117,7 @@ class EventModal {
         document.getElementById('modalHeaderAdminUpdate').innerHTML = `<h3>Make  desired changes and click 'Update event'</h3><button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Cancel</button>`
 
         document.getElementById('modalBodyAdminUpdate').innerHTML =`
-                <form id="form-events" action="javascript:eventhandler.updateEvent()">
+                <form id="form-events">
                     <textarea type="text" id="event-description" rows="5" cols="50"
                     placeholder="description"></textarea><br>
                     ${this.events[this.currentEvent].description}<br>

@@ -25,10 +25,8 @@ class ArtistHandler{
             'spotifyLink':spotify,
             'tiktokLink':tiktok
         };
-
-        console.log(artistObject);
     
-        fetch('http://localhost:8080/create/artist', {
+        await fetch('http://localhost:8080/create/artist', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -40,8 +38,6 @@ class ArtistHandler{
     }   
     
     async deleteArtist(id){
-
-        alert("what")
 
         const confirmDelete = confirm("Are you sure?");
         if (confirmDelete) {
@@ -56,18 +52,21 @@ class ArtistHandler{
         }        
     }
     
-    async updateEvent(eventObject){
-        const objectasjson = JSON.stringify(eventObject);
-        const confirmUpdate = confirm("Are you sure you want to update event?");
+    async updateArtist(artistObject){
+        const objectasjson = JSON.stringify(artistObject);
+        const confirmUpdate = confirm("Are you sure you want to update this artist?");
         if (confirmUpdate){
-            await fetch(`http://localhost:8080/update/event`,{
+            await fetch(`http://localhost:8080/update/artist`,{
                 method: 'PUT',
                 headers: {
                     'Content-type': 'application/json'
                 },
                 body: objectasjson
-            });
+            });  
+            alert("Artist updated")
+            artistModal.getAllArtists();         
         }
+        
     }
 }
 let artisthandler = new ArtistHandler();
