@@ -16,7 +16,7 @@ class EventHandler{
             'facebookLink':facebook
         };
     
-        fetch('http://localhost:8080/create/event', {
+        await fetch('http://localhost:8080/create/event', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -53,6 +53,8 @@ class EventHandler{
                 },
                 body: objectasjson
             });
+            alert("Event updated")
+            eventModal.getAllEvents();
         }
     }
 }
