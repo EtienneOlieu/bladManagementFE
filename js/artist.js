@@ -3,7 +3,6 @@ class ArtistHandler{
     constructor(){}
 
     async createArtist(){
-    alert('her?')
         const name = document.getElementById('artist-name').value;
         const description = document.getElementById('artist-description').value;
         const agent = document.getElementById('artist-agent').value;
