@@ -44,7 +44,6 @@ async function productCardGenerator(){
 function addToCart(buttonID){
 
     cart.push(buttonID.id)
-    console.log(cart)
     // Total sum
     total = total + productData[buttonID.id -1].product.price;
     let lineItemSumRoot = document.getElementById('lineItemSum');
@@ -100,9 +99,6 @@ function removeItem(buttonID){
         })
         cart = testcart;
     
-
-
-
     let realID = "lineItemID" + buttonID.id
     let divToDelete= document.getElementById(realID);
     let divWithNumber = divToDelete.getElementsByClassName("lineItemNumber");
@@ -116,6 +112,91 @@ function removeItem(buttonID){
     lineItemSumRoot.textContent = totalTwoDecimals;
 }
 
-function finalizeOrder(){
-    
+function clearCart(){
+//WORK IN PROGRESS
 }
+
+
+
+function finalizeOrder(){
+    if (cart.length != 0){
+    createOrder().then(function(){
+        getLastOrder().then(function(result){
+            let orderID = result;
+            addLineToOrder(orderID);
+            })  
+    })
+    clearCart();
+}
+
+function addLineToOrder(orderID){
+    let counter = 1;
+    let productAmount = 0;
+    let productId;
+
+    for (let index = 0; index < productData.length; index++) {
+        
+    for (let index = 0; index < cart.length; index++) {
+        if (counter == cart[index]){
+            productAmount ++;
+            productId = cart[index];
+               
+                }
+            }
+            if (productAmount != 0){
+                saveOrderLine(productId,productAmount,orderID)
+            }
+            productAmount = 0;
+        counter++;
+        }    
+    }
+  }
+
+
+
+ 
+
+ async function saveOrderLine(productId, productAmount, orderID){
+  
+
+    let orderLineObject = {
+        "orderAmount" : productAmount,
+        "item" : {
+            "id" : productId
+        },
+        "order" :{
+            "id" : orderID
+        } 
+    };
+    await fetch('http://localhost:8080/create/orderLine', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(orderLineObject)
+        
+    })
+}
+
+async function createOrder(){
+    const date = new Date();
+    let orderObject = {
+    'orderDate' : date
+    };
+    await fetch('http://localhost:8080/create/order', {
+    method: 'POST',
+    headers: {
+        'Content-type': 'application/json'
+    }, 
+    body: JSON.stringify(orderObject)
+    })
+
+}
+
+async function getLastOrder(){
+    let response = await fetch('http://localhost:8080/get/lastOrder');
+    let OrderID = await response.json();
+    return OrderID;
+}
+
+

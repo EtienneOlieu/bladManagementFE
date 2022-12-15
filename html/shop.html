@@ -56,11 +56,14 @@
             <div id="lineItemTarget">
 
             </div>
-            <div id="lineItemSum">
+            <span>
+                Total: 
+            </span>
+            <span id="lineItemSum">
                 
-            </div>
+            </span>
             <div>
-                <button class="lineItemFinishOrder">finish order</button>
+                <button onclick="finalizeOrder()" class="lineItemFinishOrder">finish order</button>
             </div>
         </div>
         </div>
@@ -74,9 +77,9 @@
         <div class="lineItemName">
             navn på produktet
         </div>
-        <div class="lineItemPrice">
+        <span class="lineItemPrice">
             49,95
-        </div>
+        </span>
         <div class="lineItemAmount">
             <span>
                 antal: 
@@ -85,7 +88,7 @@
                 1
             </span>
             <span>
-                <button onclick="removeItem(this)">Remove item</button>
+                <button onclick="removeItem(this)" class="lineItemButton">Remove item</button>
             </span>
         </div>
     </div>
@@ -101,7 +104,7 @@
         <p class="productDescription">TEXT TO BE REPLACED</p>
         </div>
         <p class="inStock">AVAILABILITY</p>
-        <p><button onclick="addToCart(this)">Add to Cart</button></p>
+        <p><button onclick="addToCart(this)" class="cardButton">Add to Cart</button></p>
     </div>
 </template>
 
