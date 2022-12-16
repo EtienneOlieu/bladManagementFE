@@ -1,3 +1,7 @@
+body{
+    background-color: black;
+}
+
 .nav-padding{
     padding-right: 100px;
 }
@@ -6,6 +10,7 @@
 .red .active a:hover{
     background-color: red;
 }
+
 #nav1
 {
     background-color: aqua;
@@ -24,47 +29,48 @@ body{
 }
 
 .anchorSection{
-    min-height: 100vh;
+    margin-top: -5.5%;
+    padding-top: 12.5%;
+    min-height: 110vh;
 }
 
-.carousel {
-      margin: auto;
-      width: 65%;
-      padding: 0px;
-      height: auto;  
-      overflow: hidden;
-      aspect-ratio: 16/9;
-    }
-.expandedContent{
-    margin: auto;
-    width: 65%;
-    height: auto;
-    background-color: rgba(228, 99, 99, 0.279);
-}
 .thisImage{
     object-fit: contain;
     width: 50%;
     height: auto;
 }
-#artistHeading{
-    background-color: black;
-}
 
-#eventsHeading{
-    background-color: #9bb9bb;
-}
-
-#contactHeading{
-    background-color: black;
-}
 
 .collapsible{
     cursor: pointer;
 }
+
 .content{
     display: none;
     overflow: hidden;
 }
+
+.grid {
+    cursor: pointer;
+}
+
+.grid:hover {
+    opacity: 50%;
+}
+
+.galleryPopup {
+    width: 100%;
+}
+.modal-dialog {
+    max-width: 60%;
+}
+.modal-body {
+    display: flex;
+}
+.modal-body img {
+    object-fit: contain;
+}
+
 #bm_navbar{
     position: fixed;
     font-size: 120%;
@@ -73,11 +79,4 @@ body{
 #bm_navbar a{
     z-index: 2000;
     color: white;
-}
-
-#bm_about{
-    position:relative;
-    padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%
 }

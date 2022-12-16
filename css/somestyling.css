@@ -1,0 +1,60 @@
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    border-radius: 25%;
+    font-size: 2em;
+    width: 50px;
+    height: auto;
+    text-align: center;
+    text-decoration: none; 
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #373737;
+    color: white;
+  }
+
+  .fa-spotify{
+    background: #373737;
+    color: rgb(255, 255, 255);
+  }
+
+  .fa-instagram{
+    background: #373737;
+    color: rgb(255, 255, 255);
+  }
+
+  .fa-tiktok{
+    background: #373737;
+    color: rgb(255, 255, 255);
+  }
+
+  .fa-brands{
+    background: #373737;
+    color: rgb(255, 255, 255);
+  }
+
+  .someImage{
+    width: 30px;
+    height: auto;
+    text-align: center;
+  }
+
+  .someImageL{
+    width: 60px;
+    height: auto;
+
+  }
+
+  .someBox{
+    display: flex;
+    justify-content: space-evenly;
+  }
